@@ -1,5 +1,7 @@
 import React from "react";
+import LineChart from "./Chart";
 import {data} from "./data"
+import Widget from "./WeatherWidget";
 
 
 export default function Weather(){
@@ -8,12 +10,8 @@ export default function Weather(){
     const condition = current.condition
     return(
         <div className="Weather ">
-            <div className="location flex justify-center items-center py-4">
-                <span>{location.name}</span>
-                <img src={condition.icon} alt="" />
-            </div>
-            <div className="main">
-                <h4>Tempature: </h4>
+            <div className="main"> 
+                <Widget/>
             </div>
             
         </div>
