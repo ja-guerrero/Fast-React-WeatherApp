@@ -1016,7 +1016,7 @@ const data = {
                 ]
             },
             {
-                "date": "2022-10-10",
+                "date": "2022-10-11",
                 "date_epoch": 1665360000,
                 "day": {
                     "maxtemp_c": 19.5,
@@ -1993,5 +1993,5 @@ const data = {
         ]
     }
 }
-console.log(data.forecast)
+
 export { data }
