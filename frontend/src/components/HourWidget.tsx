@@ -7,12 +7,13 @@ export default function HourWidget({hour}:any){
         let timeOfDay = "AM"
         let curHour = time.slice(-5,-3)
         curHour = parseInt(curHour)
-        curHour = curHour % 12
+        
         if (curHour >= 12)
             timeOfDay = "PM"
         if (curHour == 0){
             curHour = 12
         }
+        curHour = curHour % 12
         return `${curHour} ${timeOfDay}`
     }
 

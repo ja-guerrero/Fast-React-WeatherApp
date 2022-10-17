@@ -34,7 +34,13 @@ async def getcurrentWeather():
         if i["date"] == today:
             return (i["hour"][hour])
 
-
+@app.get("/api/dayWeather/")
+async def getForecast(days: int = 1):
+    wData = []
+    ranges = data["forecast"]["forecastday"][0:days]
+    for day in ranges:
+        wData.append(day["day"])
+    return wData
 
 @app.get("/api/getHour")
 async def getHour():
@@ -93,7 +99,7 @@ data = {
     "forecast": {
         "forecastday": [
             {
-                "date": "2022-10-09",
+                "date": "2022-10-16",
                 "date_epoch": 1665273600,
                 "day": {
                     "maxtemp_c": 15.5,
@@ -1068,7 +1074,7 @@ data = {
                 ]
             },
             {
-                "date": "2022-10-11",
+                "date": "2022-10-17",
                 "date_epoch": 1665360000,
                 "day": {
                     "maxtemp_c": 19.5,

@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function DayWidget(){
+export default function DayWidget({day:{}}){
     return(
         <div className="flex justify-between items-center">
 			<span className="font-semibold text-lg w-1/4">Sat, 23 Jan</span>
