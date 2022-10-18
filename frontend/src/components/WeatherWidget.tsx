@@ -46,7 +46,6 @@ export default function Widget(props:any){
 		return () => clearInterval(interval);
 		
 	},[])
-	console.log(tdWeather)
 	
     return(
     
