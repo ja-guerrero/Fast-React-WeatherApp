@@ -46,7 +46,7 @@ export default function Widget(props:any){
 		return () => clearInterval(interval);
 		
 	},[])
- 
+	console.log(tdWeather)
 	
     return(
     
@@ -54,7 +54,7 @@ export default function Widget(props:any){
 		
         <div className="w-full max-w-screen-sm bg-white p-10 rounded-xl ring-8 ring-white ring-opacity-40">
                     <div className="flex justify-between">
-                        {forecast &&
+                        {forecast && tdWeather &&
                         <div className="flex flex-col">
                             <span className="text-6xl font-bold">{tdWeather[time]?.temp_f} F°</span>
                             <span className="font-semibold mt-1 text-gray-500">{location?.name}</span>
