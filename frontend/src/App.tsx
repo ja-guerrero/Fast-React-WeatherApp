@@ -1,19 +1,14 @@
 import React from 'react';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Homepage from './components/Homepage';
+import Widget from './components/WeatherWidget';
 import './App.css';
 
 function App() {
   return (
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Homepage />}>
-        </Route>
-      </Routes>
-    </BrowserRouter>
-   
-  );
-}
+   <div className="main">
+      <Widget/>
+   </div>
+)}
 
 export default App;

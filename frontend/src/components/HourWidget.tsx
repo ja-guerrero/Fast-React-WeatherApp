@@ -13,6 +13,9 @@ export default function HourWidget({hour}:any){
         if (curHour == 0){
             curHour = 12
         }
+        if(curHour == 12){
+            return "12 PM"
+        }
         curHour = curHour % 12
         return `${curHour} ${timeOfDay}`
     }
